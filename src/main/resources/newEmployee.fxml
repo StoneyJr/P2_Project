@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="btx.prog.project.gui.NewEmployeeController">
+   <children>
+      <VBox layoutY="7.0" prefHeight="500.0" prefWidth="700.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="77.0" prefWidth="700.0" text="New Employee" VBox.vgrow="ALWAYS">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="chooseEmployeeTypComboBox" onAction="#chooseEmployeeType" prefWidth="250.0" promptText="Choose pilot or flight attendant">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="260.0" />
+               </VBox.margin>
+            </ComboBox>
+            <GridPane prefHeight="200.0" prefWidth="692.0" vgap="10.0">
+               <columnConstraints>
+                  <ColumnConstraints halignment="RIGHT" hgrow="ALWAYS" maxWidth="315.0" minWidth="10.0" prefWidth="232.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="482.0" minWidth="10.0" prefWidth="408.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label prefHeight="20.0" prefWidth="80.0" text="first name" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="firstnameField" onAction="#getFirstName" promptText="enter first name" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" />
+                  <Label prefHeight="20.0" prefWidth="80.0" text="last name" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="lastNameField" onAction="#getLastName" promptText="enter last name" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS" />
+                  <Label prefHeight="20.0" prefWidth="80.0" text="gender" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="genderChoiceBox" prefHeight="25.0" prefWidth="403.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS" />
+                  <Label prefHeight="20.0" prefWidth="80.0" text="birthday" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="birthdatePicker" onAction="#getBirthday" prefHeight="25.0" prefWidth="402.0" promptText="09.09.2009" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3" GridPane.vgrow="ALWAYS" />
+                  <Label layoutX="90.0" layoutY="125.0" prefHeight="20.0" prefWidth="80.0" text="hired since" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" GridPane.vgrow="ALWAYS">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="employeeDatePicker" layoutX="272.0" layoutY="93.0" onAction="#getDateOfEmployment" prefHeight="25.0" prefWidth="402.0" promptText="enter date of employment" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label prefHeight="20.0" prefWidth="80.0" text="salary" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5" GridPane.vgrow="ALWAYS">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="salaryTextField" onAction="#getSalary" prefHeight="25.0" prefWidth="132.0" promptText="enter salary" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+               </children>
+            </GridPane>
+            <HBox prefHeight="135.0" prefWidth="700.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <AnchorPane prefHeight="152.0" prefWidth="700.0">
+                     <children>
+                        <VBox layoutX="350.0" prefHeight="127.0" prefWidth="342.0" spacing="10.0">
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="80.0" text="rank of pilot">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <ComboBox fx:id="chooseRankOfPilotComboBox" layoutX="100.0" layoutY="40.0" onAction="#chooseRankOfPilot" prefHeight="27.0" prefWidth="230.0" promptText="choose rank of pilot" />
+                           </children>
+                           <padding>
+                              <Insets left="90.0" />
+                           </padding>
+                        </VBox>
+                        <Label layoutX="5.0" prefHeight="20.0" prefWidth="181.0" text="flight attendant can speak:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <ListView fx:id="languageList" layoutX="14.0" layoutY="29.0" onMouseClicked="#chooseLanguage" prefHeight="97.0" prefWidth="358.0" />
+                        <Label layoutX="181.0" layoutY="4.0" text="(multiple selection with control key)">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <AnchorPane prefHeight="56.0" prefWidth="700.0">
+               <children>
+                  <Label fx:id="wrongInputLabel" layoutX="14.0" layoutY="16.0" prefHeight="18.0" prefWidth="302.0" textFill="#eb2c09" />
+                  <Button fx:id="saveButton" layoutX="528.0" layoutY="3.0" mnemonicParsing="false" onAction="#saveEmployee" prefHeight="30.0" prefWidth="158.0" text="save new employee" />
+                  <Button fx:id="returnToHomepageButton" layoutX="324.0" layoutY="3.0" mnemonicParsing="false" onAction="#returnToHomepage" prefHeight="30.0" prefWidth="158.0" text="return to homepage" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
